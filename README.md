@@ -44,7 +44,7 @@ Compatible with :
 ```
 
 note:
-do not forget to insert:
+do not forget to insert (if using mac):
 ```javascript
 nano ~/.bash_profile
 or
