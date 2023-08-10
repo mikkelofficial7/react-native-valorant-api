@@ -42,3 +42,19 @@ Compatible with :
 ```javascript
  Node v18.16.1
 ```
+
+note:
+do not forget to insert:
+```javascript
+nano ~/.bash_profile
+or
+nano ~/.zprofile
+```
+and add:
+```javascript
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+```
+
+source: https://reactnative.dev/docs/environment-setup
