@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
-import { ViewPropTypes } from "deprecated-react-native-prop-types"
 
 import Color from './pkg/constant/Colors.js'
 import LoginView from './pkg/fragment/LoginView.js'
