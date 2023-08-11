@@ -1,4 +1,7 @@
 # React native app using valorant api
+
+<img src="https://raw.githubusercontent.com/mikkelofficial7/react-native-valorant-api/main/pic1.jpg" height=400px> <img src="https://raw.githubusercontent.com/mikkelofficial7/react-native-valorant-api/main/pic2.jpg" height=400px>
+
 Package I use :
 ```javascript
 {
