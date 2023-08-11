@@ -1,4 +1,4 @@
-# react-native-valorant-api
+# React native app using valorant api
 Package I use :
 ```javascript
 {
@@ -43,8 +43,8 @@ Compatible with :
  Node v18.16.1
 ```
 
-note:
-do not forget to insert (if using mac):
+Note:
+Do not forget to insert this while setup Android SDK for RN (if using mac):
 ```javascript
 nano ~/.bash_profile
 or
@@ -57,4 +57,8 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 ```
 
+To run it, using:
+```javascript
+npx expo run:android
+```
 source: https://reactnative.dev/docs/environment-setup
