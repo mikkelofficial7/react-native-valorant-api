@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import { FlatList, StyleSheet, Text, View, Image, TouchableWithoutFeedback, } from 'react-native'
+import React from 'react'
+import { StyleSheet, Text, View, Image, TouchableWithoutFeedback, } from 'react-native'
 import Color from '../constant/Colors.js'
-import Strings from '../constant/Strings.js'
 
 const ItemViewAllValorantCharacter = ({ dataItem, onItemClick }) => (
   <TouchableWithoutFeedback onPress={() => onItemClick(dataItem.uuid) }>

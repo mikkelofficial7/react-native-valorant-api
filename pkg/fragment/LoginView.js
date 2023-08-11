@@ -11,34 +11,29 @@ import DefaultButton from '../uiComponent/DefaultButton.js'
 var width = Dimensions.get('window').width; // match parent
 var height = Dimensions.get('window').height; // match parent
 
-class LoginView extends React.Component {  
-  render() {  
-    return (  
-      <ImageBackground source={Constant.posterUrl} style={styles.backgroundImage}>
+const LoginView = ({ navigation }) => {
+  return(<ImageBackground source={Constant.posterUrl} style={styles.backgroundImage}>
+      <View style={styles.containerCenter}> 
 
-        <View style={styles.containerCenter}> 
+        <Image
+            style={styles.posterLogo}
+            source={Constant.iconMain}/> 
 
-          <Image
-              style={styles.posterLogo}
-              source={Constant.iconMain}/> 
+        <Text style={styles.title}>
+              { Strings.app_name }
+        </Text> 
 
-          <Text style={styles.title}>
-               { Strings.app_name }
-          </Text> 
+      </View> 
 
-        </View> 
-
-        <View style={styles.containerFooter}>
-          <DefaultButton 
-             title={Strings.login_text} 
-             color={Color.white}
-             backgroundColor={Color.green}
-             onPress={() => this.props.navigation.navigate('Main')}/>
-        </View>
-
-      </ImageBackground>
-    );  
-  }  
+      <View style={styles.containerFooter}>
+        <DefaultButton 
+            title={Strings.login_text} 
+            color={Color.white}
+            backgroundColor={Color.green}
+            onPress={() => navigation.navigate('Main')}/>
+      </View>
+  </ImageBackground>
+  )
 }
 
 const styles = StyleSheet.create({  

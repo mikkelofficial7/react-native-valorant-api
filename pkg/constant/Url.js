@@ -1,3 +1,5 @@
+const BASE_URL = 'https://valorant-api.com/';
+
 export default {
-   getAllCharacter: 'https://valorant-api.com/v1/agents',
+   getAllCharacter: BASE_URL+'v1/agents',
 };

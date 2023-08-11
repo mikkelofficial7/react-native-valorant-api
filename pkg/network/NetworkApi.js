@@ -1,17 +1,23 @@
-import React from 'react';
+import axios from 'axios';
 import Url from '../constant/Url.js'
 
 const onGetAllCharacter = ({ onStateSet }) => {
-  fetch(Url.getAllCharacter, {
-       method: 'GET'
-    })
-    .then((response) => response.json())
-    .then((responseJson) => {       
-       onStateSet({response: responseJson, isLoading: false});
-    })
-    .catch((error) => {
-       onStateSet({response: [], isLoading: false});
-    });
+  console.log("Data is coming from url: "+Url.getAllCharacter);
+
+  axios({
+   method: 'GET',
+   url: Url.getAllCharacter,
+ }).then(function (response) {
+      console.log("Data load successfully..");
+      console.log(response.data);
+      
+      onStateSet({response: response.data, isLoading: false});
+   })
+   .catch(function (error) {
+      console.log("Data load failed: "+error);
+
+      onStateSet({response: [], isLoading: false});
+   });
 };
 
 export default onGetAllCharacter

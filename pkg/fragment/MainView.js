@@ -15,26 +15,30 @@ import ListViewAllValorantCharacter from '../uiComponent/ListViewAllValorantChar
 var width = Dimensions.get('window').width; // match parent
 var height = Dimensions.get('window').height; // match parent
 
-class MainView extends React.Component { 
-  state = { response: [], isLoading: true }
+const MainView = () => {
+  const [response, setResponse] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  componentDidMount = () => {
-      onGetAllCharacter({ onStateSet: newState => this.setState(newState) });
+  useEffect(() => {
+    console.log("Data starting to load");
+    
+    onGetAllCharacter({ onStateSet: newState => {
+      setResponse(newState.response);
+      setIsLoading(false);
+    }});
+  }, []);
+
+  if(isLoading) {
+    return(<ActivityIndicator size='large' style={styles.loadingView}/>)
+
+  } else {
+    return(
+      <View>
+          <ListViewAllValorantCharacter dataList={response.data} />
+      </View>
+    );
+    
   }
-
-  render() { 
-    if(this.state.isLoading) {
-      return(<ActivityIndicator size='large' style={styles.loadingView}/>)
-
-    } else {
-      return(
-        <View>
-            <ListViewAllValorantCharacter dataList={this.state.response.data} />
-        </View>
-      );
-      
-    }
-  }  
 }
 
 const styles = StyleSheet.create({
