@@ -34,7 +34,7 @@ const MainView = () => {
   } else {
     return(
       <View>
-          <ListViewAllValorantCharacter dataList={response.data} />
+          <ListViewAllValorantCharacter dataList={response.data} onItemClick={(itemId) => showModal(itemId)} />
       </View>
     );
     

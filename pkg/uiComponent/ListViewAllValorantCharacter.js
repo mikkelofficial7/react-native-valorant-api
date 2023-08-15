@@ -4,13 +4,13 @@ import showModal from '../util/Modal.js'
 
 import ItemViewAllValorantCharacter from './ItemViewAllValorantCharacter.js'
 
-const ListViewAllValorantCharacter = ({ dataList }) => (
+const ListViewAllValorantCharacter = ({ dataList, onItemClick }) => (
   <FlatList
     data={dataList}
     numColumns={3}
     keyExtractor={item => item.uuid}
     renderItem={({item}) => (
-      <ItemViewAllValorantCharacter key={item.uuid} dataItem={item} onItemClick={(itemId) => showModal(itemId)} />
+      <ItemViewAllValorantCharacter key={item.uuid} dataItem={item} onItemClick={(itemId) => onItemClick(itemId)} />
     )}
   />
 );

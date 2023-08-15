@@ -7,6 +7,10 @@ const onGetAllCharacter = ({ onStateSet }) => {
   axios({
    method: 'GET',
    url: Url.getAllCharacter,
+   headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+   },
  }).then(function (response) {
       console.log("Data load successfully..");
       console.log(response.data);
