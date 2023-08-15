@@ -28,7 +28,20 @@ export default function App() {
             name="Main"
             component={MainView}
             options={{
-              title: "Main Page",
+              title: "List of Hero",
+              headerShown: true,
+              headerStyle: { backgroundColor: Color.green }, // Set the header background color
+              headerTintColor: Color.white, // Set the header text color
+              stackAnimation:'slide_from_right',
+              cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+            }}
+          />
+          <Stack.Screen
+            name="Detail"
+            component={DetailView}
+            initialParams={{ heroId: '' }}
+            options={{
+              title: "Detail Hero",
               headerShown: true,
               headerStyle: { backgroundColor: Color.green }, // Set the header background color
               headerTintColor: Color.white, // Set the header text color
