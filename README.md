@@ -53,11 +53,20 @@ nano ~/.bash_profile
 or
 nano ~/.zprofile
 ```
+or
+```javascript
+brew install --cask android-platform-tools -> provide android platform to run emulator
+```
 and add:
 ```javascript
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+```
+or you can manually do this:
+```javascript
+1. create file local.properties
+2. add value -> sdk.dir=/Users/USERNAME/Library/Android/sdk
 ```
 
 To run it, using:
